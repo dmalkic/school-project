@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #fffefe;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 0px;
+    color: #fc0000;
+}
+
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+    background-color: white;
+}
+
+
+.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+}
+
+.img-box:hover {
+    cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+    font-size: 0.8em;
+}
+
+.opacity-low {
+    opacity: 0.5;
+}
+
+
+
+
+.banner {
+    background-image: url("img/manchester-united.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: right;
+}
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 65px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+li a:hover {
+    background-color: #ff0000;
+}
+h1,h2 {
+    margin: 0.5em;
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+main a {
+    color: #27318b;
+    text-decoration: none;
+}
+main a:hover {
+    color: #242424;
+    text-decoration: underline;
+}
+p {
+    margin: 1em;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+hr {
+    margin: 1em;
+    border: 1px dotted #27318b;
+    clear: both;
+}
+.news img {
+    width: 15%;
+    float: left;
+    padding: 0.5em;
+    margin: 0 1em 0.5em 0.5em;
+}
+.news h2 {
+    margin: 0.5em 0.7em;
+    font-size: 1.5em;
+    color: #27318b;
+}
+.news hr {
+    margin: 1em;
+    border: 1px dotted #27318b;
+    clear: both;
+}
+.news time {
+    font-size: 90%;
+    font-style: italic;
+}
+.description {
+    font-weight: bold;
+    margin: 0.8em 1em 1.5em 1em;
+}
+#news_gallery figure {
+    padding: 0.5em;
+    margin: 0 1em 0.5em 1em;
+    float: left;
+    width: 10%;
+    border: 1px solid black;
+}
+#news_gallery figcaption {
+    font-size: 90%;
+    text-align: center;
+}
+
+figure {
+    padding: 0.5em;
+    margin: 0 1em 0.5em 1em;
+    float: left;
+    width: 35%;
+    border: none;
+}
+figcaption {
+    font-size: 90%;
+}
+img {
+    width: 100%;
+}
+footer {
+    background-color: #333;
+    padding: 0.1em;
+    clear: both;
+}
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0.5em;
+}
+footer img {
+    width: 20px;
+}
+@media screen and (max-width: 900px) {
+    figure {
+        width: 90%;
+        margin: 1em;
+    }
+    .news img {
+        width: 95%;
+        padding: 0.5em;
+        margin: 0 1em 0.5em 0.5em;
+    }
+    .news time {
+        margin: 0 0 0 1em;
+    }
+}
+
+
+.column {
+    float: left;
+    width: 30.0%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+    padding: 0 16px;
+}
+.image-container img {
+    position: absolute;
+    width: 75%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+}
+
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: #000000;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.myButton {
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    background-color:#7892c2;
+    border-radius:42px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:21px;
+    padding:2px 20px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #283966;
+    margin-left:38%;
+
+
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+    background-color:#476e9e;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+
+
+
+
